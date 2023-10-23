@@ -82,15 +82,21 @@ pry(main)> customer_service.expenses
 
 ## Iteration 3
 
-You have been contracted by the State of Colorado to create a software system that can track its yearly budgets. Specifically, they would like you to implement the following functionality:
+You have been contracted by the State of Colorado to create a software system that can track its yearly budgets. Use TDD to create a `Budget` class that adds the following functionality: 
+(You may choose to add additional methods not listed here to help you build this functionality.)
 
 1. Each budget has a year, as well as a way to read that data
 2. A budget can list all of its departments
 3. A budget can list all departments with expenses less than $500
 4. A budget can list all employees' salaries
+5. A budget can list all departments and their current expenses
 
-Build upon your code from the first two iterations to complete this task.
+| Method Name                     | Return Value |
+|-------------                    |--------------|
+| `year`                          | integer representing year (ex:`2023`) |
+| `departments`                   | `Array` containing `Department` objects |
+| `add_department(department)`    | up to you    |
+| `departments_with_low_expenses` | `Array` containing `Department` objects |
+| `employee_salaries`             | `Array` containing each Employee's salary (which should be integers) |
+| `current_expenses_by_department`| `Hash` where keys are `Department` objects, and values are that `Department`'s current expenses |
 
-## Iteration 4
-
-The State of Colorado has given you additional functionality they would like you to implement. They would like to track which employee is responsible for an expense. They should also be able to total all expenses for which a specific employee is responsible.
