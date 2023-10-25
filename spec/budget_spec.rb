@@ -1,10 +1,10 @@
 require './lib/department'
 require './lib/employee'
-require '.lib/budget'
+require './lib/budget'
 
 require "pry"
 
-RSpec.describe Department do
+RSpec.describe Budget do
   it "exists" do
     budget_2023 = Budget.new("2023")
     expect(budget_2023).to be_a Budget
@@ -20,7 +20,7 @@ RSpec.describe Department do
     expect(budget_2023.departments).to eq([])
   end
 
-  
+
 
 
 
