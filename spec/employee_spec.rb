@@ -21,7 +21,7 @@ RSpec.describe Employee do
   
   it "has a salary" do
     bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "$100000"})
-    expect(bobbi.age).to eq(100000)
+    expect(bobbi.salary).to eq(100000)
   end
 
   it "has a give_raise method" do
