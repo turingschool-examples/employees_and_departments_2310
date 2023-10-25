@@ -30,13 +30,12 @@ RSpec.describe Department do
     end
   end
 
-  describe '#expenses' do
+  describe '#expense' do
     it 'shows the expense' do
       expect(@customer_service.expenses).to eq(0)
       @customer_service.expense(100)
       @customer_service.expense(25)
       expect(@customer_service.expenses).to eq(125)
-      
     end
   end
 end
