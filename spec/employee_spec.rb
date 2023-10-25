@@ -6,4 +6,10 @@ RSpec.describe Employee do
 
   expect(bobbi).to be_a(Employee)
   end
+
+  it "has readable attributes" do
+    bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "$100000"})
+
+    expect(bobbi.name).to eq("Bobbi Jaeger")
+  end
 end
