@@ -37,6 +37,7 @@ describe Department do
             customer_service.hire(bobbi)
             customer_service.hire(aaron)
 
+            expect(customer_service.employees.first).to be_a(Employee)
             expect(customer_service.employees).to include(bobbi, aaron)
         end
     end
