@@ -19,4 +19,18 @@ class Budget
     departments_with_low_expenses
   end
 
+  # def employee_salaries
+  #   employee_salaries = []
+  #   department_employees = []
+
+  #   departments.map do |department|
+  #     department_employees << department.employees
+  #   end
+
+  #   department_employees.map do |employee|
+  #     employee_salaries << employee.salary # fix
+  #   end
+  #   employee_salaries
+  # end
+
 end

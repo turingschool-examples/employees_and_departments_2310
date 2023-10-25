@@ -38,4 +38,22 @@ RSpec.describe Budget do
     expect(budget.departments_with_low_expenses).to eq([finance, human_relations])
   end
 
+  # it 'returns employee salaries' do
+  #   budget = Budget.new(2023)
+  #   customer_service = Department.new("Customer Service")
+  #   finance = Department.new("Finance")
+  #   budget.add_department(customer_service)
+  #   budget.add_department(finance)
+  #   bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "100000"})
+  #   aaron = Employee.new({name: "Aaron Tanaka", age: "25", salary: "90000"})  
+  #   customer_service.hire(bobbi)
+  #   finance.hire(aaron)
+
+  #   expect(budget.employee_salaries).to eq([100000, 90000])
+  # end
+
+  it 'returns current expenses by department' do
+
+  end
+
 end
