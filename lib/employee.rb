@@ -10,7 +10,7 @@ class Employee
     @salary = attributes[:salary]
   end
 
-  def give_raise(amount)
-    @salary += amount
+  def give_raise(raise_amount)
+    @salary << raise_amount
   end
 end
