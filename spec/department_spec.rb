@@ -22,4 +22,18 @@ RSpec.describe Employee do
     expect(customer_service.employees).to eq([bobbi, aaron])
   end
 
+  it 'can spend no money' do
+    customer_service = Department.new("Customer Service")
+
+    expect(customer_service.expenses).to eq(0)
+  end
+
+  it 'can spend all that money' do
+    customer_service = Department.new("Customer Service")
+
+    customer_service.expense(100) #in pry session these output the running increase??
+    customer_service.expense(25)
+
+    expect(customer_service.expenses).to eq(125)
+  end
 end
