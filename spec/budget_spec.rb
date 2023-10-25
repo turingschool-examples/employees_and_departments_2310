@@ -53,4 +53,22 @@ describe Budget do
             expect(budget.departments_with_low_expenses).to include(customer_service)
         end
     end
-end
+
+    describe "#employee_salaries" do
+        it "lists salaries of each employee in a department" do
+            budget = Budget.new(1912)
+
+            customer_service = Department.new("Customer Service")
+            accounting = Department.new("Accounting")
+            bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "100000"})
+            aaron = Employee.new({name: "Aaron Tanaka", age: "25", salary: "90000"})
+            budget.add_department(customer_service)
+            budget.add_department(accounting)
+
+            customer_service.hire(bobbi)
+            accounting.hire(aaron)
+
+            expect(budget.employee_salaries).to include(100000, 90000)
+        end
+    end
+end 
