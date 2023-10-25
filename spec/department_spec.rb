@@ -22,4 +22,11 @@ RSpec.describe Employee do
 
     expect(customer_service.employees).not_to eq([])
   end
+
+  it 'can expense' do
+    customer_service = Department.new("Customer Service")
+    customer_service.expense(500)
+    binding.pry
+    expect(customer_service.expenses).to eq(500)
+  end
 end
