@@ -1,12 +1,12 @@
 require './lib/department'
 require './lib/employee'
-require './lib/department'
+require './lib/budget'
 
 RSpec.describe Budget do
   it "exists" do
     budget = Budget.new(2023)
 
-    expect(budget(2023)).to be_a(Budget)
+    expect(budget).to be_a(Budget)
   end
 
   it "has a list of departments" do
@@ -15,7 +15,7 @@ RSpec.describe Budget do
     expect(budget.departments).to be_a(Array)
   end
 
-  it "can add departments"
+  it "can add departments" do
     budget = Budget.new(2023)
     customer_service = Department.new("Customer Service")
     shipping = Department.new("Shipping")
@@ -25,5 +25,5 @@ RSpec.describe Budget do
     budget.add_department(shipping)
     budget.add_department(warehouse)
     expect(budget.departments.count).to eq(3)
-
+  end
 end
