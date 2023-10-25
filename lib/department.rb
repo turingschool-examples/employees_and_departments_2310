@@ -1,15 +1,16 @@
 class Department
 
   attr_reader :expenses
+  attr_accessor :department
 
-  def initialize(department)
-    @department = department
+  def initialize(department_name)
+    @department_name = department_name
     @employees = []
     @expenses = 0
   end
 
   def name
-    @department
+    @department_name
   end
 
   def employees
