@@ -1,7 +1,9 @@
 class Department
-    attr_reader 
+    attr_reader :employees, :expenses, :name
 
-    def initialize()
-        
+    def initialize(name_input)
+        @name = name_input
+        @employees = []
+        @expenses = 0
     end
 end
