@@ -15,5 +15,11 @@ describe Budget do
 
             expect(budget.year).to eq(1912)
         end
+
+        it "lists its departments" do
+            budget = Budget.new(1912)
+
+            expect(budget.departments).to eq([])
+        end
     end
 end
