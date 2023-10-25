@@ -26,4 +26,8 @@ RSpec.describe Employee do
     expect(bobbi.salary).to eq("100000")
   end
 
+  it 'can give_raise' do
+    bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "$100000"})
+
+    expect(bobbi.give_raise).to eq("105000")
 end
