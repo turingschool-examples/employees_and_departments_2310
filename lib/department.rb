@@ -13,7 +13,8 @@ def hire(employee)
   @employees << employee
 end
 
-
-
+def expense(expense_amount)
+  @expenses += expense_amount
+end
 
 end
