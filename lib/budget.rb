@@ -19,10 +19,16 @@ class Budget
   end
 
   def employee_salaries
-    salaries = []
+    @salaries = []
 
     @departments.each do |department|
+      department.employees.each do |employee|
+        @salaries << employee.salary
+      end
     end
+    @salaries
   end
+
+  
 
 end
