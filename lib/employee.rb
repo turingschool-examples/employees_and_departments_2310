@@ -5,4 +5,6 @@ class Employee
     @age = info[:age].to_i
     @salary = info[:salary].delete(", $").to_i
   end
+
+  
 end
