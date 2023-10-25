@@ -3,8 +3,8 @@ class Employee
 
   def initialize(employee_details)
     @name = employee_details[:name]
-    @age = employee_details[:age]
-    @salary = employee_details[:salary]
+    @age = employee_details[:age].to_i
+    @salary = employee_details[:salary].delete_prefix("$").to_i
   end
 
 end
