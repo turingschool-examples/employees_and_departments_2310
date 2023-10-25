@@ -1,3 +1,5 @@
+require './lib/employee'
+
 class Department
     attr_reader :employees, :expenses, :name
 
@@ -5,5 +7,13 @@ class Department
         @name = name_input
         @employees = []
         @expenses = 0
+    end
+
+    def hire(employee)
+        @employees.append(employee)
+    end
+
+    def expense(expense_input)
+        @expenses += expense_input
     end
 end
