@@ -29,6 +29,12 @@ class Budget
     @salaries
   end
 
-  
+  def current_expenses_by_department
+    @current_expenses = []
 
+    @departments.each do |department|
+      @current_expenses << department.expenses
+    end
+    @current_expenses
+  end
 end
