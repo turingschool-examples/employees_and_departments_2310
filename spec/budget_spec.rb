@@ -15,14 +15,12 @@ RSpec.describe Budget do
     customer_service = Department.new("Customer Service")
     budget.add_department(customer_service)
 
-    expect(budget.departments).to be_instance_of(Array)
-    expect(budget.departments).not_to be(nil)
-    expect(budget.departments.first.name).to eq("Customer Service")
+    expect(budget.departments).to eq([customer_service])
 
     finance = Department.new("Finance")
     budget.add_department(finance)
 
-    expect(budget.departments.last.name).to eq("Finance")
+    expect(budget.departments).to eq([customer_service, finance])
   end
 
   it 'returns departments with low expenses' do

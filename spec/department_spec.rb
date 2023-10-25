@@ -18,11 +18,10 @@ RSpec.describe Department do
     customer_service.hire(bobbi)
     customer_service.hire(aaron) 
 
-    expect(customer_service.employees).to be_instance_of(Array)
-    expect(customer_service.employees.first).to be_instance_of(Employee)
+    expect(customer_service.employees).to eq([bobbi, aaron])
   end
 
-  it 'expenses amounts' do
+  it 'expenses amount' do
     customer_service = Department.new("Customer Service")
     customer_service.expense(100)
     customer_service.expense(25)  
