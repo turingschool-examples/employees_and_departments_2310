@@ -1,7 +1,9 @@
 
 class Employee
   
-  attr_accessor :name, :age, :salary
+  attr_reader :name, 
+              :age, 
+              :salary
 
   def initialize(hash)
     @name = hash[:name]
@@ -12,9 +14,4 @@ class Employee
   def give_raise(raise)
     @salary += raise
   end
-
-
-
-
-
 end

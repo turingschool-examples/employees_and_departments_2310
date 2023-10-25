@@ -1,8 +1,6 @@
 require './lib/department'
 require './lib/employee'
 
-require "pry"
-
 RSpec.describe Department do
   it "exists" do
     customer_service = Department.new("Customer Service")
@@ -44,5 +42,4 @@ RSpec.describe Department do
 
     expect(customer_service.expenses).to eq(125)
   end
-  
-  end
+end

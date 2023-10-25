@@ -2,7 +2,8 @@
 
 class Budget
 
-  attr_accessor :year, :departments
+  attr_reader :year, 
+              :departments
 
   def initialize(year)
     @year = year
