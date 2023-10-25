@@ -57,6 +57,8 @@ RSpec.describe Department do
     it "can make hash with expenses by department" do
         budget = Budget.new(2023)
 
+        expect(budget.current_expenses_by_department).to eq({})
+
         department1 = Department.new("Towing Crew")
         department1.expense(600)
         budget.add_department(department1)
@@ -65,6 +67,7 @@ RSpec.describe Department do
         department2.expense(300)
         budget.add_department(department2)
         
-        expect(current_expenses_by_department).to eq({department1: 600, department2: 300})
+        expect(budget.current_expenses_by_department[department1]).to eq(600)
+        expect(budget.current_expenses_by_department[department2]).to eq(300)
     end
 end
