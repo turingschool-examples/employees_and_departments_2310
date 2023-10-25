@@ -45,5 +45,4 @@ RSpec.describe Department do
 
     expect(customer_service.expenses).to eq(125)
   end
-
 end
