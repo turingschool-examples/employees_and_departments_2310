@@ -33,4 +33,12 @@ class Budget
             end
         salaries
     end
+
+    def current_expenses_by_department
+        hash = {}
+        @departments.each do |department|
+            hash[:department] = department.expenses
+        end
+        hash
+    end
 end
