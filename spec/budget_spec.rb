@@ -43,4 +43,10 @@ RSpec.describe Budget do
       expect(@budget_1.departments_with_low_expenses).to_not eq([@department_2])
     end
   end
+
+  describe '#employee_salaries' do
+    it 'list all employees salaries' do
+      expect().to eq()
+    end
+  end
 end
