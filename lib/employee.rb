@@ -8,4 +8,8 @@ class Employee
     @salary = employee_data[:salary]
   end
 
+  def give_raise(amount)
+    @salary += amount
+  end
+
 end
