@@ -10,7 +10,7 @@ RSpec.describe do
   it "can check name" do
     bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "$100000"})
 
-    expect(bobbi.name).to eq("Bobbi Jager")
+    expect(bobbi.name).to eq("Bobbi Jaeger")
   end
 
   it "can check age" do
@@ -28,8 +28,8 @@ RSpec.describe do
   it "can give a raise" do
     bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "$100000"})
 
-    bobbi.give_raise
-
+    bobbi.give_raise(5000)
+    require 'pry'; binding.pry
     expect(bobbi.salary).to eq(105000)
   end
 end
