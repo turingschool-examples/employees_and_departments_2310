@@ -3,9 +3,12 @@ class Department
   def initialize(name)
     @name = name 
     @employees = []
+    @expenses = 0
   end
 
   def hire(employee)
     @employees << employee
   end
+
+  
 end
