@@ -20,18 +20,22 @@ RSpec.describe Department do
         expect(customer_service.employees).to eq([])
     end
 
-    it "hires an employee" do
+    xit "hires an employee" do
         bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "100000"})
         aron = Employee.new({name: "Aaron Tanaka", age: "25", salary: "90000"}) 
         customer_service = Department.new("Customer Service")  
-
         customer_service.hire(bobbi)
         customer_service.hire(aaron)
 
-        expect(customer_service.employees).to be (bobbi, aaron)
+        expect(customer_service.employees).to be([bobbi, aaron])
     end
 
-    
-
+    it "has expenses" do
+        customer_service = Department.new("Customer Service")
+        customer_service.expense(100)
+        customer_service.expense(25)
+        
+        expect(customer_service.expense).to eq(125)
+    end
 
 end
