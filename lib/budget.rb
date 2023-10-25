@@ -4,4 +4,5 @@ class Budget
     @year = year 
     @departments = []
   end
+  
 end
