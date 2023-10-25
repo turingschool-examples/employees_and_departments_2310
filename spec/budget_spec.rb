@@ -7,6 +7,7 @@ RSpec.describe Budget do
 
     expect(budget).to be_instance_of(Budget)
     expect(budget.year).to eq(2023)
+    expect(budget.departments).to eq([])
   end
 
   it 'adds departments' do
