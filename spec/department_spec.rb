@@ -3,7 +3,7 @@ require './lib/department'
 require 'pry'
 
 
-RSpec.describe Employee do
+RSpec.describe Department do
   it 'can initialize' do
     customer_service = Department.new("Customer Service")    
 
