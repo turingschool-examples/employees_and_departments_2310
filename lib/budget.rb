@@ -11,4 +11,14 @@ class Budget
   def add_department(name)
     @departments << name
   end
+
+  def departments_with_low_expenses
+    low_expense_offices = []
+    @departments.each do |department|
+      if department.expenses < 500
+        low_expense_offices << department
+      end
+    end
+    return low_expense_offices
+  end
 end

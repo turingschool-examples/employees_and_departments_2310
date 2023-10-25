@@ -26,4 +26,17 @@ RSpec.describe Budget do
     budget.add_department(warehouse)
     expect(budget.departments.count).to eq(3)
   end
+
+  it "can return low expense offices" do
+    budget = Budget.new(2023)
+    customer_service = Department.new("Customer Service")
+    shipping = Department.new("Shipping")
+    warehouse = Department.new("Warehouse")
+
+    budget.add_department(customer_service)
+    budget.add_department(shipping)
+    budget.add_department(warehouse)
+    require 'pry'; binding.pry
+    expect(budget.departments_with_low_expenses).to be_a(Array)
+  end
 end
