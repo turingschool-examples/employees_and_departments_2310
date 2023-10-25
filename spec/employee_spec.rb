@@ -10,4 +10,13 @@ RSpec.describe Employee do
       expect(@bobbi).to be_a(Employee)
     end
   end
+
+  describe '#attributes' do
+    it 'reads the attributes' do
+      expect(@bobbi.name).to eq("Bobbi Jaeger")
+      expect(@bobbi.age).to eq(30)
+      # require 'pry'; binding.pry
+      expect(@bobbi.salary).to eq(100000)
+    end
+  end
 end
