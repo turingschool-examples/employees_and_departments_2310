@@ -41,15 +41,10 @@ RSpec.describe Budget do
     customer_service.expense(500)
     customer_service.expense(25)
 
-
     expect(budget_2023.departments).to eq([customer_service, janitorial])
-
     expect(budget_2023.departments_with_low_expenses).to eq([janitorial])
     janitorial.expense(25)
     expect(budget_2023.departments_with_low_expenses).to eq([janitorial])
-
-
-
   end
 
 
