@@ -21,6 +21,12 @@ describe Department do
 
             expect(customer_service.employees).to eq([])
         end
+
+        it "instantiates an expenses variable with default of 0" do
+            customer_service = Department.new("Customer Service")
+
+            expect(customer_service.expenses).to eq(0)
+        end
     end
 
     describe "#hire" do
