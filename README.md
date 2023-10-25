@@ -59,7 +59,7 @@ pry(main)> customer_service.employees
 pry(main)> bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "100000"})
 # => #<Employee:0x00007fce46194788...>
 
-pry(main)> aaron = Employee.new({name: "Aaron Tanaka", age: "25", salary: "90000"})  
+pry(main)> bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "100000"})  
 # => #<Employee:0x00007fce46a610a0...>
 
 pry(main)> customer_service.hire(bobbi)
