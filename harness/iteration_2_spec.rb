@@ -2,6 +2,10 @@ require 'rspec'
 require './lib/employee'
 require './lib/department'
 
+RSpec.configure do |config|
+  config.default_formatter = 'doc'
+end
+
 RSpec.describe 'Departments Spec Harness' do
   before(:each) do
     @bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "$100000"})
