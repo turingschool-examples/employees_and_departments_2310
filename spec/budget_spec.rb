@@ -12,4 +12,11 @@ RSpec.describe Budget do
       expect(@budget_1).to be_a(Budget)
     end
   end
+
+  describe '#attributes' do
+    it 'reads attributes' do
+      expect(@budget_1.year).to eq(2023)
+      expect(@budget_1.departments).to eq([])
+    end
+  end
 end
