@@ -11,7 +11,17 @@ class Budget
     @year = 2023
   end
 
-  #def add_department(department)
+  def departments
+    @departments
+  end
 
+  def add_department(department)
+    @departments << department
+  end
+
+  def add_departments_with_low_expenses(value)
+    if department.expenses < 500
+    @departments << department
+  end
 
 end
