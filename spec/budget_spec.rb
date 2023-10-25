@@ -32,4 +32,25 @@ RSpec.describe Department do
         
         expect(budget.departments_with_low_expenses).to eq([department2])
     end
+
+    it "can make a list of Employee salaries in entire Budget" do
+        budget = Budget.new(2023)
+
+        tony = Employee.new({name: "Tony", age: "30", salary: "$79000"})
+        stevie = Employee.new({name: "Stevie", age: "26", salary: "$68000"})
+        marcello = Employee.new({name: "Marcello", age: "58", salary: "$120000"})
+        luigi = Employee.new({name: "Luigi", age: "36", salary: "$82000"})
+
+        department1 = Department.new("Towing Crew")
+        department1.hire(tony)
+        department1.hire(stevie)
+        budget.add_department(department1)
+
+        department2 = Department.new("Reposession Team")
+        department1.hire(marcello)
+        department1.hire(luigi)
+        budget.add_department(department2)
+        
+        expect(budget.employee_salaries).to eq([79000, 68000, 120000, 82000])
+    end
 end
