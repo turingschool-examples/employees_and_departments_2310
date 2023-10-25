@@ -3,7 +3,6 @@ class Department
               :employees,
               :expenses
 
-
   def initialize(data) 
     @name = data
     @employees = []
