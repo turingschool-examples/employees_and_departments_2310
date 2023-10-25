@@ -6,4 +6,8 @@ class Department
     @name = data
     @employees = []
   end
+
+  def hire(name)
+    @employees << name
+  end
 end
