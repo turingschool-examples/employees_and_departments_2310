@@ -22,4 +22,15 @@ describe Budget do
             expect(budget.departments).to eq([])
         end
     end
+
+    describe "#add_department" do
+        it "adds department object to @departments array" do
+            budget = Budget.new(1912)
+            customer_service = Department.new("Customer Service")
+
+            budget.add_department(customer_service)
+
+            expect(budget.departments).to include(customer_service)
+        end
+    end
 end
