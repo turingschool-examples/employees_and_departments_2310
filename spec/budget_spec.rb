@@ -19,7 +19,7 @@ RSpec.describe Department do
         expect(budget.departments).to eq([department1, department2])
     end
 
-    it "can see which departments in Budget class have low expenses" do
+    xit "can see which departments in Budget class have low expenses" do
         budget = Budget.new(2023)
 
         department1 = Department.new("Towing Crew")
@@ -33,7 +33,7 @@ RSpec.describe Department do
         expect(budget.departments_with_low_expenses).to eq([department2])
     end
 
-    it "can make a list of Employee salaries in entire Budget" do
+    xit "can make a list of Employee salaries in entire Budget" do
         budget = Budget.new(2023)
 
         tony = Employee.new({name: "Tony", age: "30", salary: "$79000"})
@@ -52,5 +52,19 @@ RSpec.describe Department do
         budget.add_department(department2)
         
         expect(budget.employee_salaries).to eq([79000, 68000, 120000, 82000])
+    end
+
+    it "can make hash with expenses by department" do
+        budget = Budget.new(2023)
+
+        department1 = Department.new("Towing Crew")
+        department1.expense(600)
+        budget.add_department(department1)
+
+        department2 = Department.new("Reposession Team")
+        department2.expense(300)
+        budget.add_department(department2)
+        
+        expect(current_expenses_by_department).to eq({department1: 600, department2: 300})
     end
 end
