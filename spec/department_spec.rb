@@ -36,8 +36,8 @@ RSpec.describe Department do
 
     customer_service.expense(100)
     customer_service.expense(25)
-    
-    expect(customer_service.expense).to eq(125)
+
+    expect(customer_service.expenses).to eq(125)
   end
   
   end
