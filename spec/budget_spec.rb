@@ -53,7 +53,18 @@ RSpec.describe Budget do
   # end
 
   it 'returns current expenses by department' do
+    budget = Budget.new(2023)
+    customer_service = Department.new("Customer Service")
+    finance = Department.new("Finance")
+    human_relations = Department.new("Human Relations")
+    budget.add_department(customer_service)
+    budget.add_department(finance)
+    budget.add_department(human_relations)
+    customer_service.expense(600)
+    finance.expense(400)
+    human_relations.expense(200)
 
+    expect(budget.current_expenses_by_department).to eq([600, 400, 200])
   end
 
 end

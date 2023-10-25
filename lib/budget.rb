@@ -33,4 +33,15 @@ class Budget
   #   employee_salaries
   # end
 
+  def current_expenses_by_department
+    current_expenses_by_department = {}
+    current_expenses_by_department[:department]
+
+    departments.map do |department|
+      department_expenses = department.expenses
+      current_expenses_by_department[department] = department_expenses
+    end
+
+  end
+
 end
