@@ -67,7 +67,23 @@ RSpec.describe Budget do
 
     customer_service.hire(bobbi)
     customer_service.hire(aaron)
-    binding.pry
-    expect(@salaries).not_to eq([])
+
+    expect(budget_2023.employee_salaries).not_to eq([])
+    expect(budget_2023.employee_salaries).to eq(["100000", "90000"])
+  end
+
+  it 'can collect total expenses' do
+    budget_2023 = Budget.new(2023)
+    customer_service = Department.new("Customer Service")
+    quality = Department.new("Quality")
+
+    budget_2023.add_department(customer_service)
+    budget_2023.add_department(quality)
+
+    customer_service.expense(250)
+    quality.expense(5000)
+
+    expect(budget_2023.current_expenses_by_department).not_to eq([])
+    expect(budget_2023.current_expenses_by_department).to eq([250, 5000])
   end
 end
