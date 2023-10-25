@@ -6,5 +6,8 @@ class Employee
     @salary = info[:salary].delete(", $").to_i
   end
 
-  
+  def give_raise(amount)
+    # require 'pry'; binding.pry
+    @salary += amount 
+  end
 end
