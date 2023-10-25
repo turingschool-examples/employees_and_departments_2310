@@ -23,4 +23,14 @@ class Budget
             end
         cheap_departments
     end
+
+    def employee_salaries
+        salaries = []
+            @departments.each do |department|
+                department.employees.each do |employee|
+                    salaries.append(employee.salary)
+                end
+            end
+        salaries
+    end
 end
