@@ -23,5 +23,14 @@ class Budget
     low_exp_array
   end
 
+  def employee_salaries
+    employee_salary_array = []
+    @departments.each do |department|
+      (department.employees).each do |employee|
+        employee_salary_array << employee.salary
+      end
+    end
+    employee_salary_array
+  end
 
 end

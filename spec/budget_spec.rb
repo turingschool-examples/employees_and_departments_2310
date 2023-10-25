@@ -47,5 +47,23 @@ RSpec.describe Budget do
     expect(budget_2023.departments_with_low_expenses).to eq([janitorial])
   end
 
+  it "has an employee salaries method" do
+    bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "100000"})
+    aaron = Employee.new({name: "Aaron Tanaka", age: "25", salary: "90000"})
+    tommy = Employee.new({name: "Thomas Gruber", age: "63", salary: "120000"})
+    
+    customer_service = Department.new("Customer Service")
+    janitorial = Department.new("Janitorial")
+    customer_service.hire(bobbi)
+    customer_service.hire(aaron)
+    janitorial.hire(tommy)
+    
+    budget_2023 = Budget.new(2023)
+    budget_2023.add_department(customer_service)
+    budget_2023.add_department(janitorial)
+    expect(budget_2023.employee_salaries).to eq([100000, 90000, 120000])
+  end
+
+
 
 end
