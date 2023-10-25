@@ -9,8 +9,9 @@ class Employee
     @salary = employee[:salary]
   end
 
-#   def give_raise(raise)
-
-#     @salary << salary += raise 
-#   end
-# end
+  def give_raise(raise)
+    @salary = []
+    @salary << @salary += raise
+  end
+    @salary 
+end
