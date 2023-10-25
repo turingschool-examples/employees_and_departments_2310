@@ -64,6 +64,20 @@ RSpec.describe Budget do
     expect(budget_2023.employee_salaries).to eq([100000, 90000, 120000])
   end
 
+  it "has a current_expenses_by_department method" do
+    budget_2023 = Budget.new(2023)
+    customer_service = Department.new("Customer Service")
+    janitorial = Department.new("Janitorial")
+    budget_2023.add_department(customer_service)
+    budget_2023.add_department(janitorial)
 
+    customer_service.expense(500)
+    customer_service.expense(25)
+    janitorial.expense(25)
+
+    expect(budget_2023.current_expenses_by_department).to be_a Hash
+    expect(budget_2023.current_expenses_by_department).to eq(true)
+
+  end
 
 end
