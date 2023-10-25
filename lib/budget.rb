@@ -29,4 +29,12 @@ class Budget
         end
         salaries_array
     end
+
+    def current_expenses_by_department
+        department_expenses = {}
+        @departments.each do |department|
+            department_expenses[department.name] = department.expenses
+        end
+        department_expenses
+    end
 end

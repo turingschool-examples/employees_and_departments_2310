@@ -71,4 +71,21 @@ describe Budget do
             expect(budget.employee_salaries).to include(100000, 90000)
         end
     end
+
+    describe "#current_expenses_by_department" do
+        it "lists expenses by department" do
+            budget = Budget.new(1912)
+            customer_service = Department.new("Customer Service")
+            accounting = Department.new("Accounting")
+
+            budget.add_department(customer_service)
+            budget.add_department(accounting)
+
+            customer_service.expense(1200)
+            accounting.expense(50)
+
+            expect(budget.current_expenses_by_department["Customer Service"]).to eq(1200)
+            expect(budget.current_expenses_by_department["Accounting"]).to eq(50)
+        end
+    end
 end 
