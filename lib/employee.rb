@@ -1,5 +1,5 @@
 class Employee
-    attr_accessor :name, :age, :salary, :amount_of_raise
+    attr_accessor :name, :age, :salary
 
     def initialize(employee)
         @name = employee[:name]
@@ -8,9 +8,8 @@ class Employee
     end
 
     def give_raise(amount_of_raise)
-        @salary = salary
-        salary = salary.to_i
-        salary + @amount_of_raise
+        @salary.to_i = salary
+        salary + amount_of_raise
     end
 
 

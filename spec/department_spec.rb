@@ -22,7 +22,7 @@ RSpec.describe Department do
 
     xit "hires an employee" do
         bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "100000"})
-        aron = Employee.new({name: "Aaron Tanaka", age: "25", salary: "90000"}) 
+        aaron = Employee.new({name: "Aaron Tanaka", age: "25", salary: "90000"}) 
         customer_service = Department.new("Customer Service")  
         customer_service.hire(bobbi)
         customer_service.hire(aaron)
@@ -35,7 +35,7 @@ RSpec.describe Department do
         customer_service.expense(100)
         customer_service.expense(25)
         
-        expect(customer_service.expense).to eq(125)
+        expect(customer_service.expenses).to eq(125)
     end
 
 end
