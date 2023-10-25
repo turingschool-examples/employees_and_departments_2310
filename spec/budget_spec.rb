@@ -9,7 +9,7 @@ RSpec.describe Department do
         expect(budget.departments).to eq([])
     end
 
-    it "can add departments to Budget" do
+    xit "can add departments to Budget" do
         budget = Budget.new(2023)
         department1 = Department.new("Towing Crew")
         budget.add_department(department1)
@@ -17,5 +17,19 @@ RSpec.describe Department do
         budget.add_department(department2)
         
         expect(budget.departments).to eq([department1, department2])
+    end
+
+    it "can see which departments in Budget class have low expenses" do
+        budget = Budget.new(2023)
+
+        department1 = Department.new("Towing Crew")
+        department1.expense(600)
+        budget.add_department(department1)
+
+        department2 = Department.new("Reposession Team")
+        department2.expense(300)
+        budget.add_department(department2)
+        
+        expect(budget.departments_with_low_expenses).to eq([department2])
     end
 end

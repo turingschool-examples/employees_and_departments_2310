@@ -13,4 +13,14 @@ class Budget
     def add_department(department_input)
         @departments.append(department_input)
     end
+
+    def departments_with_low_expenses
+        cheap_departments = []
+            @departments.each do |department|
+                if department.expenses < 500
+                    cheap_departments.append(department)
+                end
+            end
+        cheap_departments
+    end
 end
