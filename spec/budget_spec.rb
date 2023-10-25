@@ -23,11 +23,11 @@ RSpec.describe Budget do
     end
   end
 
-  describe '#add_departments' do
+  describe '#add_department' do
     it 'adds departments to the budget' do
       expect(@budget_1.departments).to eq([])
-      @budget_1.add_departments(@department_1)
-      @budget_1.add_departments(@department_2)
+      @budget_1.add_department(@department_1)
+      @budget_1.add_department(@department_2)
       expect(@budget_1.departments).to eq([@department_1,@department_2])
       
     end
