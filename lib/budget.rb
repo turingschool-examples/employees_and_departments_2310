@@ -9,4 +9,8 @@ class Budget
         @year = year_input
         @departments = []
     end
+
+    def add_department(department_input)
+        @departments.append(department_input)
+    end
 end
