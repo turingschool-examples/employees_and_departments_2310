@@ -5,7 +5,7 @@ RSpec.describe Employee do
   it 'can intialize' do
     bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "$100000"})
     
-    expect(bobbi).to be_instance_of(Employee)
+    expect(bobbi).to be_a(Employee)
   end
 
   it 'has a name' do
