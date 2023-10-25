@@ -76,7 +76,7 @@ RSpec.describe Budget do
     janitorial.expense(25)
 
     expect(budget_2023.current_expenses_by_department).to be_a Hash
-    expect(budget_2023.current_expenses_by_department).to eq(true)
+    expect(budget_2023.current_expenses_by_department).to eq({"Customer Service"=>525, "Janitorial"=>25})
 
   end
 
