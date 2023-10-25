@@ -31,6 +31,7 @@ describe Budget do
             budget.add_department(customer_service)
 
             expect(budget.departments).to include(customer_service)
+            expect(budget.departments.first).to be_a Department
         end
     end
 end
