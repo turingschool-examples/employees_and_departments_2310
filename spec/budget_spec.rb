@@ -14,4 +14,16 @@ RSpec.describe Budget do
 
     expect(budget.year).to eq("2023")
   end
+
+  it "can list it's departments" do 
+    budget = Budget.new({year: "2023"})
+
+    expect(budget.departments).to eq([])
+
+    customer_service = Department.new("Customer Service") 
+
+    budget.add_department(customer_service)
+require 'pry'; binding.pry
+    expect(budget.departments).to eq()
+  end
 end
