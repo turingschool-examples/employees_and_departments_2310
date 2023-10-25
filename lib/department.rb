@@ -9,6 +9,9 @@ def initialize(name)
   @expenses = 0
 end
 
+def hire(employee)
+  @employees << employee
+end
 
 
 
