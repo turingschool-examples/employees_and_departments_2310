@@ -26,7 +26,7 @@ RSpec.describe Department do
   it 'can expense' do
     customer_service = Department.new("Customer Service")
     customer_service.expense(500)
-    binding.pry
+
     expect(customer_service.expenses).to eq(500)
   end
 end

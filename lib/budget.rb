@@ -1,5 +1,3 @@
-require_relative './department'
-
 class Budget
   
   attr_reader :year, :departments
