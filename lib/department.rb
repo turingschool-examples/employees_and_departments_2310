@@ -4,4 +4,6 @@ class Department
     @name = name 
     @employees = []
   end
+
+  
 end
