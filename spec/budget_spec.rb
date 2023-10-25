@@ -32,4 +32,15 @@ RSpec.describe Budget do
       
     end
   end
+
+  describe '#departments_with_low_expenses' do
+    it 'shows us the departments  expenses less then 500' do
+      @budget_1.add_department(@department_1)
+      @budget_1.add_department(@department_2)
+      @department_1.expense(200)
+      @department_2.expense(1000000)
+      expect(@budget_1.departments_with_low_expenses).to eq([@department_1])
+      expect(@budget_1.departments_with_low_expenses).to_not eq([@department_2])
+    end
+  end
 end
