@@ -28,7 +28,7 @@ RSpec.describe Department do
     aaron = Employee.new({name: "Aaron Tanaka", age: "25", salary: "90000"})
     customer_service.hire(bobbi)
     customer_service.hire(aaron)
-
+    
     expect(customer_service.employees.count).to eq(2)
   end
 

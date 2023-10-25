@@ -21,4 +21,12 @@ class Budget
     end
     return low_expense_offices
   end
+
+  def employee_salaries
+    salaries = []
+    @departments.each do |department|
+      salaries << department.employees.data[:salary]
+    end
+    return salaries
+  end
 end

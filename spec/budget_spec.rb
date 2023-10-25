@@ -36,7 +36,21 @@ RSpec.describe Budget do
     budget.add_department(customer_service)
     budget.add_department(shipping)
     budget.add_department(warehouse)
-    require 'pry'; binding.pry
+
     expect(budget.departments_with_low_expenses).to be_a(Array)
   end
+
+  it "can return employee salaries" do
+    budget = Budget.new(2023)
+    customer_service = Department.new("Customer Service")
+    budget.add_department(customer_service)
+
+    bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "100000"})
+    aaron = Employee.new({name: "Aaron Tanaka", age: "25", salary: "90000"})
+    customer_service.hire(bobbi)
+    customer_service.hire(aaron)
+   
+    expect(budget.employee_salaries).to be_a(Array)
+  end
+
 end
